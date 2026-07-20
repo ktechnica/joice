@@ -1,0 +1,25 @@
+import { fileURLToPath, URL } from 'node:url'
+import vue from '@vitejs/plugin-vue'
+import UnoCSS from 'unocss/vite'
+import { defineConfig } from 'vite'
+import vueDevTools from 'vite-plugin-vue-devtools'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [
+    vue(),
+    UnoCSS(),
+    vueDevTools(),
+  ],
+
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
+
+  // resolve firefox issues
+  server: {
+    host: '127.0.0.1',
+  },
+})

@@ -1,0 +1,30 @@
+blockExoticSubdeps: true
+catalogMode: prefer
+cleanupUnusedCatalogs: true
+minimumReleaseAge: 2880
+shellEmulator: true
+
+trustPolicy: no-downgrade
+trustPolicyExclude:
+  - semver@6.3.1
+
+catalog:
+  '@antfu/eslint-config': 9.1.0
+  '@tsconfig/node24': 24.0.4
+  '@types/node': 24.13.2
+  '@unocss/eslint-config': 66.7.5
+  '@unocss/preset-wind4': 66.7.5
+  '@vitejs/plugin-vue': 6.0.8
+  '@vue/tsconfig': 0.9.1
+  eslint: 10.7.0
+  eslint-plugin-format: 2.0.1
+  jiti: 2.7.0
+  typescript: ~6.0.0
+  unocss: ^66.7.5
+  vite: 8.1.5
+  vite-plugin-vue-devtools: 8.1.5
+  vue: 3.6.0-rc.1
+  vue-tsc: 3.3.7
+
+strictDepBuilds: true
+verifyDepsBeforeRun: install
